@@ -1,0 +1,316 @@
+
+.body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  background: #232733; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 34, 45, 0.85);
+  z-index: 1;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+
+.hero-title .highlight {
+  color: #2bbdbe;
+}
+.hero-title .bold{
+  text-decoration:solid;
+}
+
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+
+.hero-btn {
+  background-color: #2bbdbe;
+  color: #ffffff;
+  border: none;
+  padding: 18px 32px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: skew(-31deg);
+}
+.hero-btn span{
+    display: inline-block;
+    transform: skewX(15deg);
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #2bbdbe;
+  transform: none;
+  transform: skewX(-10deg);
+
+}
+.hero-btn:hover span{
+      transform: skewX(10deg); 
+
+}
+
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 3;
+  padding: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.hero-arrow:hover {
+  opacity: 1;
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #2bbdbe;
+  transform: scale(1.2);
+}
+
+
+.hero-arrow {
+  user-select: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0.95;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.navbar-logo img {
+  height: 50px;
+  display: block;
+}
+
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px; 
+}
+
+
+.nav-item {
+  text-decoration: none;
+  color: #333333;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 12px 18px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+
+.nav-item:hover {
+  color: white;
+  background-color: #2bbdbe;
+  transform: skewX(-20deg);
+
+}
+
+
+.nav-item.active {
+  background-color: #2bbdbe; 
+  color: #ffffff;
+}
+
+
+.section-layout {
+  padding: 80px 20px;
+  background-color: #f7f9fa; 
+  text-align: center;
+}
+
+.portfolio-header {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #888888;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.title-underline {
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0 auto;
+}
+
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: #444444;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #2bbdbe;
+  color: #ffffff;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+
+.filter-btn.active {
+  background-color: #2bbdbe;
+  color: #ffffff;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
